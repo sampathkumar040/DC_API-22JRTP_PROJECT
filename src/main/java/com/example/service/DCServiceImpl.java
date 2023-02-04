@@ -26,26 +26,27 @@ public class DCServiceImpl implements DCService{
 
 	@Override
 	public String saveIncomeDetails(IncomeDetails incomeDetails) {
-		// TODO Auto-generated method stub
-		return null;
+		 incomeRepository.save(incomeDetails);
+		return "IncomeDetails Saved";
 	}
 
 	@Override
 	public String saveEducationDetails(EducationalDetails edDetails) {
-		// TODO Auto-generated method stub
-		return null;
+		 educationRepository.save(edDetails);
+		return "educationDetails Saved";
 	}
 
 	@Override
 	public String saveKidsDetails(KidsDetails kidsDetails) {
-		// TODO Auto-generated method stub
-		return null;
+		KidsDetails status = kidsRepository.save(kidsDetails);
+		
+		return "KidsDetails Saved";
 	}
 
 	@Override
 	public String savePlanDetails(PlanSection planSection) {
-		// TODO Auto-generated method stub
-		return null;
+		planRepository.save(planSection);
+		return "PlanDetails Saved";
 	}
 
 }
